@@ -204,12 +204,21 @@ enum usb_endpoints {
 #endif
 
 #ifdef RAW_ENABLE
+<<<<<<< HEAD
     RAW_IN_EPNUM  = NEXT_EPNUM,
     #if STM32_USB_USE_OTG1
     #define RAW_OUT_EPNUM RAW_IN_EPNUM
     #else
     RAW_OUT_EPNUM = NEXT_EPNUM,
     #endif
+=======
+    RAW_IN_EPNUM = NEXT_EPNUM,
+#    if STM32_USB_USE_OTG1
+#        define RAW_OUT_EPNUM RAW_IN_EPNUM
+#    else
+    RAW_OUT_EPNUM         = NEXT_EPNUM,
+#    endif
+>>>>>>> Manually run formatting CI process (#11375)
 #endif
 
 #ifdef SHARED_EP_ENABLE
@@ -245,19 +254,33 @@ enum usb_endpoints {
 #ifdef VIRTSER_ENABLE
     CDC_NOTIFICATION_EPNUM = NEXT_EPNUM,
     CDC_IN_EPNUM           = NEXT_EPNUM,
+<<<<<<< HEAD
     #if STM32_USB_USE_OTG1
     #define CDC_OUT_EPNUM  CDC_IN_EPNUM
     #else
     CDC_OUT_EPNUM          = NEXT_EPNUM,
     #endif
+=======
+#    if STM32_USB_USE_OTG1
+#        define CDC_OUT_EPNUM CDC_IN_EPNUM
+#    else
+    CDC_OUT_EPNUM         = NEXT_EPNUM,
+#    endif
+>>>>>>> Manually run formatting CI process (#11375)
 #endif
 #ifdef JOYSTICK_ENABLE
     JOYSTICK_IN_EPNUM  = NEXT_EPNUM,
     #if STM32_USB_USE_OTG1
     JOYSTICK_OUT_EPNUM = JOYSTICK_IN_EPNUM,
+<<<<<<< HEAD
     #else
     JOYSTICK_OUT_EPNUM = NEXT_EPNUM,
     #endif
+=======
+#    else
+    JOYSTICK_OUT_EPNUM    = NEXT_EPNUM,
+#    endif
+>>>>>>> Manually run formatting CI process (#11375)
 #endif
 };
 

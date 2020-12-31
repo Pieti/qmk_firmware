@@ -806,7 +806,11 @@ void send_mouse(report_mouse_t *report) {
 }
 
 #else  /* MOUSE_ENABLE */
+<<<<<<< HEAD
 void send_mouse(report_mouse_t *report) { (void)report; }
+=======
+void   send_mouse(report_mouse_t *report) { (void)report; }
+>>>>>>> Manually run formatting CI process (#11375)
 #endif /* MOUSE_ENABLE */
 
 /* ---------------------------------------------------------
